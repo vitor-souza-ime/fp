@@ -1,6 +1,8 @@
-Calculadora de Correção de Fator de Potência
+#Calculadora de Correção de Fator de Potência#
+
 Um aplicativo React Native para calcular a capacitância necessária para correção do fator de potência com base nas entradas do usuário. Desenvolvido e testado usando Snack.
-Funcionalidades
+
+Funcionalidades:
 
 Calcula a potência reativa a compensar (var) e a capacitância necessária (μF).
 Campos de entrada para potência ativa (W), fator de potência atual, fator de potência desejado, tensão (V) e frequência (Hz).
@@ -8,13 +10,13 @@ Valida as entradas para garantir que sejam positivas e dentro de faixas aceitáv
 Exibe os resultados em uma interface clara e formatada.
 Design responsivo com interface rolável.
 
-Pré-requisitos
+Pré-requisitos:
 
 Node.js (para desenvolvimento local, opcional se usar Snack).
 Expo CLI (para desenvolvimento local).
 Um navegador ou dispositivo móvel para testar o aplicativo no Snack.
 
-Instalação
+Instalação:
 
 Usando Snack:
 
