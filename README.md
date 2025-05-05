@@ -1,4 +1,4 @@
-#Calculadora de Correção de Fator de Potência#
+**Calculadora de Correção de Fator de Potência**
 
 Um aplicativo React Native para calcular a capacitância necessária para correção do fator de potência com base nas entradas do usuário. Desenvolvido e testado usando Snack.
 
