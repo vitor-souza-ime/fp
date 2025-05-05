@@ -1,103 +1,91 @@
+Calculadora de Correção de Fator de Potência
+Um aplicativo React Native para calcular a capacitância necessária para correção do fator de potência com base nas entradas do usuário. Desenvolvido e testado usando Snack.
+Funcionalidades
 
-```markdown
-# Correção do Fator de Potência com React Native
+Calcula a potência reativa a compensar (var) e a capacitância necessária (μF).
+Campos de entrada para potência ativa (W), fator de potência atual, fator de potência desejado, tensão (V) e frequência (Hz).
+Valida as entradas para garantir que sejam positivas e dentro de faixas aceitáveis (ex.: fator de potência < 1).
+Exibe os resultados em uma interface clara e formatada.
+Design responsivo com interface rolável.
 
-Este projeto é um aplicativo desenvolvido em **React Native** (usando Expo) para calcular a **capacitância necessária à correção do fator de potência** em sistemas elétricos. Ele é ideal para engenheiros, técnicos, professores e estudantes da área elétrica que desejam obter o valor do capacitor necessário para melhorar o desempenho energético de uma instalação.
+Pré-requisitos
 
----
+Node.js (para desenvolvimento local, opcional se usar Snack).
+Expo CLI (para desenvolvimento local).
+Um navegador ou dispositivo móvel para testar o aplicativo no Snack.
 
-## ✨ Funcionalidades
+Instalação
 
-- Interface simples e amigável
-- Entrada de dados como: potência ativa, fator de potência atual e desejado, tensão e frequência
-- Cálculo automático da potência reativa (var) a ser compensada
-- Cálculo da capacitância equivalente (μF) para correção
-- Resultados exibidos de forma clara
+Usando Snack:
 
----
+Abra o projeto no Snack.
+Copie e cole o código do App.js no editor do Snack.
+Execute o aplicativo no navegador ou em um dispositivo/emulador conectado.
 
-## 📐 Fórmulas Utilizadas
 
-### Potência Reativa do Capacitor:
+Desenvolvimento Local:
 
-```
+Clone o repositório:git clone <url-do-repositório>
+cd correcao-fator-potencia
 
-Qc = P × (tan(acos(fp\_atual)) - tan(acos(fp\_desejado)))
 
-```
+Instale as dependências:npm install
 
-### Capacitância Requerida:
 
-```
+Inicie o servidor de desenvolvimento do Expo:npx expo start
 
-C = Qc / (2 × π × f × V²)
 
-````
+Escaneie o QR code com o aplicativo Expo Go ou execute no navegador/emulador.
 
-Onde:
 
-- `Qc`: potência reativa necessária (em var)
-- `P`: potência ativa (em watts)
-- `fp_atual`: fator de potência atual (ex: 0.75)
-- `fp_desejado`: fator de potência desejado (ex: 0.95)
-- `f`: frequência da rede elétrica (em Hz)
-- `V`: tensão da rede (em Volts)
-- `C`: capacitância resultante (em Farads), convertida para μF no app
 
----
+Uso
 
-## 📲 Como Usar
+Insira os seguintes valores:
+Potência Ativa (W): A potência em watts.
+Fator de Potência Atual: O fator de potência existente (ex.: 0.75).
+Fator de Potência Desejado: O fator de potência alvo (ex.: 0.95).
+Tensão (V): A tensão do sistema.
+Frequência (Hz): A frequência do sistema (padrão é 60 Hz).
 
-### 1. Executar no Expo Snack (mais simples)
 
-Acesse: [https://snack.expo.dev](https://snack.expo.dev), cole o código do `App.js` e teste direto no navegador ou no celular usando o **Expo Go**.
+Pressione o botão "Calcular Capacitor".
+Veja os resultados:
+Potência Reativa a Compensar: Em var.
+Capacitância Requerida: Em microfarads (μF).
 
-### 2. Executar Localmente
 
-Requisitos:
 
-- Node.js
-- Expo CLI (`npm install -g expo-cli`)
+Estrutura do Código
 
-Passos:
+App.js: Componente principal contendo a interface e a lógica para cálculos de correção de fator de potência.
+Usa componentes do React Native (View, Text, TextInput, Button, ScrollView).
+Estilos definidos usando StyleSheet para uma interface consistente.
 
-```bash
-git clone https://github.com/seu-usuario/nome-do-repo.git
-cd nome-do-repo
-npm install
-expo start
-````
+Testes
 
----
+O aplicativo foi testado no Snack para plataformas web e móveis.
+Certifique-se de que as entradas sejam números válidos e que os fatores de potência estejam entre 0 e 1.
+Entradas inválidas impedirão o cálculo e limparão os resultados anteriores.
 
-## 🧪 Exemplo de Uso
+Limitações
 
-**Entradas:**
+Não suporta entradas negativas ou zero.
+Os fatores de potência devem ser menores ou iguais a 1.
+Projetado para sistemas monofásicos; lógica adicional é necessária para sistemas trifásicos.
 
-* Potência ativa: 1000 W
-* Fator de potência atual: 0.75
-* Fator de potência desejado: 0.95
-* Tensão: 220 V
-* Frequência: 60 Hz
+Contribuição
 
-**Resultado:**
+Faça um fork do repositório.
+Crie uma nova branch (git checkout -b feature-branch).
+Faça suas alterações e commit (git commit -m "Adicionar funcionalidade").
+Envie para a branch (git push origin feature-branch).
+Abra um pull request.
 
-* Potência reativa a compensar: aproximadamente 505 var
-* Capacitância requerida: aproximadamente 27.32 μF
+Licença
+Este projeto está licenciado sob a Licença MIT.
+Agradecimentos
 
----
+Construído com React Native e Expo.
+Testado usando Snack.
 
-## 📁 Estrutura do Código
-
-* `App.js`: contém toda a interface e lógica do aplicativo
-* `useState`: usado para armazenar entradas do usuário
-* `TextInput`, `Button`, `View`, `ScrollView`: componentes visuais da aplicação
-* `StyleSheet`: organização de estilos para melhor aparência
-
----
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
----
